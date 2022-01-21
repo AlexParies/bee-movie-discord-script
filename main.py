@@ -3,6 +3,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
 
+uname = input("username:  ")
+passw = input("password:  ")
+chat = input("link to chat:  ")
+
 chrome_options = Options()
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
@@ -13,9 +17,6 @@ driver.title  # => "fttc"
 
 driver.implicitly_wait(5.5)
 
-uname = input("username:  ")
-passw = input("password:  ")
-chat = input("link to chat:  ")
 driver.get(chat)
 
 username = driver.find_element(By.NAME, 'email')
