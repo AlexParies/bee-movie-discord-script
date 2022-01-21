@@ -42,8 +42,7 @@ for line in f:
 ok = input('press enter when finished loading... ')
 
 msg_input = driver.find_element_by_xpath(
-    '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div[3]/div[2]/main/form/div/div/div/div[1]/div/div[3]/div[2]'
-)
+    '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div[3]/div/main/form/div[1]/div/div/div[1]/div/div[3]/div[2]')
 
 for i in passwordsL:
 
