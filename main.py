@@ -34,7 +34,7 @@ ok = input('')
 time.sleep(3)
 
 passwordsL = []
-f = open("bees.txt", "r")
+f = open("blart.txt", "r")
 for line in f:
     passwordsL.append(line)
     print(line)
@@ -43,10 +43,12 @@ ok = input('press enter when finished loading... ')
 
 msg_input = driver.find_element_by_xpath(
     '//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div[3]/div/main/form/div[1]/div/div/div[1]/div/div[3]/div[2]')
-
+l = 0
 for i in passwordsL:
-
-    print(i)
+    l = l + 1
+    print(i, l)
     time.sleep(1)
     msg_input.send_keys(i)
     msg_input.send_keys(u'\ue007')
+    with open('log.txt', 'x') as f:
+      f.write("\n", i)
